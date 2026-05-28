@@ -2,7 +2,7 @@ name: Python CI
 
 on:
   pull_request:
-    [cite_start]branches: [ "master", "main" ] # Corre els tests a una nova PR.
+    branches: [ "master", "main" ] # Corre els tests a una nova PR.
 
 jobs:
   build-and-test:
