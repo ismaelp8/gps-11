@@ -2,7 +2,7 @@ name: Python CI
 
 on:
   pull_request:
-    [cite_start]branches: [ "master", "main" ] # Corre els tests a una nova PR.
+    branches: [ "master", "main" ] # Corre els tests a una nova PR.
 
 jobs:
   build-and-test:
@@ -26,7 +26,7 @@ jobs:
       - name: Analizador de código estático
         # Passar un analitzador de codi static (pylint) 
         run: |
-          pylint main.py transform.py test.py --disable=C0114,C0116 # Desactiva avisos menores de docstrings si es necesario
+          pylint main.py transform.py test.py --disable=C0114,C0115,C0116 # Desactiva avisos menores de docstrings si es necesario
 
       - name: Ejecutar tests y coverage
         # I executar el test i el seu coverage 
